@@ -1,0 +1,379 @@
+/**TopPage&framework**/
+
+body {
+	background: rgba(161, 234, 250, 1);
+}
+
+a:visited {
+	color: inherit;
+}
+
+#wrapper {
+	border: white 3px solid;
+	width: 960px;
+	margin: 0 auto;
+	background-color: rgba(201, 241, 250, 1);
+}
+
+#header {
+	/* position: fixed; */
+	background-color: rgba(0, 231, 175, 0.28);
+	height: 120px;
+	width: 960px;
+	color: white;
+	margin: 0px;
+}
+
+.headerLeft {
+	display: flex;
+	float: left;
+	margin: 0px 200px;
+}
+
+.headerLeft h1 {
+	font-size: 40px;
+}
+
+.headerLeft a {
+	text-decoration: none;
+	padding: 0px;
+}
+
+.headerLeft p {
+	line-height: 100px;
+	/*ブロック要素なのでverticalは使えない*/
+	margin-bottom: 0px;
+}
+
+.headerRight {
+	float: right;
+	margin: 40px 0 0 0;
+}
+
+#menubar ul {
+	clear: both;
+	list-style: none;
+	margin: 0px;
+	display: flex;
+	padding-left: 0px;
+	/*これがないと"・"分のスペースがでてくる*/
+	/* width: 100%; */
+}
+
+#menubar a {
+	text-decoration: none;
+}
+
+#menubar a:hover {
+	color: red;
+}
+
+#menubar li {
+	width: 100%;
+	padding: 10px 20px;
+	text-align: center;
+	border-color: white;
+	background-color: rgba(73, 206, 40, 0.51);
+	background-size: 50px;
+	background-position: left;
+	background-repeat: no-repeat;
+	color: white;
+	font-size: 23px;
+	border: #fff 3px outset;
+}
+
+li.menubar_howto {
+	background-image: url(./img/fish_medaka.png);
+}
+
+li.menubar_camera {
+	background-image: url(./img/camera.png);
+}
+
+li.menubar_sell {
+	background-image: url(./img/shopping_cart.png);
+}
+
+li.menubar_contact {
+	background-image: url(./img/phone_kurodenwa.png);
+}
+
+img {
+	box-sizing: border-box;
+	border-top: azure 2px solid;
+	border-bottom: azure 2px solid;
+	height: 450px;
+	object-fit: cover;
+	/*トリミング*/
+}
+
+#about {
+	color: black;
+	font-size: medium;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: rgba(129, 197, 193, 0.17);
+}
+
+#about p {
+	text-align: center;
+	padding: 30px;
+}
+
+#contents p {
+	padding-left: 10px;
+}
+
+/******TOPPAGE************/
+span.youkihi {
+	font-weight: 100;
+	font-size: large;
+	color: rgba(25, 0, 255, 0.952);
+}
+
+#count {
+	text-align: center;
+	font-size: larger;
+	font-weight: 300;
+	background-color: rgba(129, 197, 193, 0.17);
+}
+
+table{
+	font-size: 30px;
+	max-width: 400px;
+	width:100%;
+	margin: 40px;
+}
+td{
+	text-align: center;
+}
+
+
+/****全サブぺージの subtitle*****/
+
+#contents {
+	clear: left;
+	color: black;
+	/* font-size: medium; */
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: rgba(129, 197, 193, 0.17);
+	margin: 20px 100px;
+}
+
+#contentsTitle {
+	color: #fff;
+	background-color: rgba(0, 231, 175, 0.28);
+	padding: 10px 10px 10px 50px;
+	width: 700px;
+}
+
+.contentsSubTitle h2 {
+	text-decoration: underline overline blue;
+	background-image: url(./img/fish_medaka.png);
+	background-size: 50px;
+	background-repeat: no-repeat;
+	padding-left: 60px;
+	margin-left: 30px;
+}
+
+#honbun {
+	padding: 0px 100px 10px 100px;
+}
+
+span.contentsAttention {
+	font-size: 13px;
+}
+
+span.contentsAttentionBold {
+	font-size: larger;
+	font-weight: bold;
+	color: red;
+}
+
+
+/********howto********/
+
+.howtolist {
+	font-size: 30px;
+}
+
+.howtolist li {
+	padding-bottom: 10px;
+}
+
+.introduceTitle {
+	font-size: large;
+	margin-bottom: 10px;
+}
+
+.syutten {
+	color: gainsboro;
+	font-size: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.kyouchou {
+	font-size: large;
+}
+
+.adjustImg {
+	height: 300px;
+}
+
+/*****calender*******/
+#calender{
+	width:50%;
+}
+
+/****bubbles******/
+
+.bubbles {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.bubble {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	animation: bubble 20s ease-in infinite;
+}
+
+.bubble:nth-child(1) {
+	width: 20px;
+	height: 20px;
+	left: 10%;
+	animation-duration: 6s;
+}
+
+.bubble:nth-child(2) {
+	width: 30px;
+	height: 30px;
+	left: 20%;
+	animation-delay: 5s;
+}
+
+.bubble:nth-child(3) {
+	width: 30px;
+	height: 30px;
+	left: 30%;
+	animation-duration: 5s;
+}
+
+.bubble:nth-child(4) {
+	width: 50px;
+	height: 50px;
+	left: 45%;
+	animation-duration: 8s;
+	animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+	width: 10px;
+	height: 10px;
+	left: 60%;
+	animation-duration: 11s;
+}
+
+.bubble:nth-child(6) {
+	width: 30px;
+	height: 30px;
+	left: 70%;
+	animation-duration: 5s;
+	animation-delay: 6s;
+}
+
+.bubble:nth-child(7) {
+	width: 25px;
+	height: 25px;
+	left: 80%;
+	animation-duration: 6s;
+}
+
+.bubble:nth-child(8) {
+	width: 55px;
+	height: 55px;
+	left: 5%;
+	animation-duration: 10s;
+}
+
+@keyframes bubble {
+	0% {
+		bottom: 0px;
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(50px);
+	}
+	50% {
+		transform: translateX(100px);
+	}
+	75% {
+		transform: translateX(30px);
+	}
+	100% {
+		bottom: 2500px;
+	}
+}
+
+/******coming soon******/
+
+.stickerURL {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	color: red;
+}
+
+.reference {
+	height: 120px;
+}
+
+@media screen and (max-width: 480px) {}
+
+
+/***********contact*******************/
+
+.endMsg{
+	/* display: none; */
+	text-align: center;
+	font-size: 32px;
+}
+
+.thximg{
+	display: flex;
+	margin: 0 auto;
+}
+
+
+form {
+	padding: 0px 100px 20px 100px;
+}
+
+#form p {
+	margin-bottom: 5px;
+	border-left: 5px rgb(107, 211, 107) solid;
+}
+
+input, textarea {
+	margin-left: 7px;
+	border-radius: 5px;
+}
+
+input.sousin {
+	margin-top: 30px;
+	background-color: rgb(107, 211, 107);
+}
+
+#toTop p {
+	text-align: center;
+}

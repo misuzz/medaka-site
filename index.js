@@ -1,6 +1,6 @@
 'user strict';
 
-window.onload = () => setInterval("timeCount", 1000);
+window.onload = () => setInterval(timeCount, 1000);
 // window.onload = () => showProcess(now);
 
 // var now = new Date();

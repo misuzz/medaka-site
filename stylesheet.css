@@ -129,24 +129,109 @@ span.youkihi {
 	font-size: large;
 	color: rgba(25, 0, 255, 0.952);
 }
-
 #count {
 	text-align: center;
 	font-size: larger;
 	font-weight: 300;
 	background-color: rgba(129, 197, 193, 0.17);
 }
-
-table{
-	font-size: 30px;
-	max-width: 400px;
-	width:100%;
-	margin: 40px;
+/*****calender&carousel*******/
+#lower{
+	display: flex;
 }
-td{
+
+#calender{
+	width:50%;
+}
+
+#medakaBabySection{
+	width: 450px;
+	height: 450px;
+	outline: 3px solid red;
+}
+
+#medakaBabySection p{
+	font-size: 18px;
+	font-weight: bold;
+	color: blue;
 	text-align: center;
 }
 
+#medakaBabyPics{
+	width: 350px;
+	height: 350px;
+	margin: 0 auto;
+	outline: 5px solid blue;
+	overflow: hidden;
+	position: relative;
+}
+
+#medakaBabyPics ul{
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform .5s;
+}
+
+#medakaBabyPics li{
+	height: 100%;
+	min-width: 100%;
+}
+
+#medakaBabyPics li img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#prev, #next{
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	font-size: 20px;
+	font-weight: bolder;
+	color:rgba(161, 100, 250, 1);
+	background:rgba(161, 234, 250, 0.8);
+	border: none;
+	border-radius: 50px;
+	padding: 0 4px 4px;
+}
+
+#prev:hover, #next:hover{
+	background:rgba(161, 234, 250, 1);
+}
+#prev{
+	left: 10;
+}
+
+#next{
+	right: 0;
+}
+
+.btnHidden{
+	display: none;
+}
+
+nav{
+	text-align: center;
+	padding-top: 10px;
+}
+
+nav button{
+	border: none;
+	background-color: rgb(196, 196, 196);
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+
+.current{
+	background-color: rgb(124, 124, 124);
+}
 
 /****全サブぺージの subtitle*****/
 
@@ -221,10 +306,6 @@ span.contentsAttentionBold {
 	height: 300px;
 }
 
-/*****calender*******/
-#calender{
-	width:50%;
-}
 
 /****bubbles******/
 

@@ -8,6 +8,15 @@ a:visited {
 	color: inherit;
 }
 
+a{
+	text-decoration: 2px solid underline grey;
+}
+
+
+a:hover{
+	color: rgb(161, 100, 250, 1);
+}
+
 #wrapper {
 	border: white 3px solid;
 	width: 960px;
@@ -41,13 +50,21 @@ a:visited {
 
 .headerLeft p {
 	line-height: 100px;
-	/*ブロック要素なのでverticalは使えない*/
 	margin-bottom: 0px;
 }
 
 .headerRight {
-	float: right;
-	margin: 40px 0 0 0;
+	display: flex;
+	height: 100%;
+	flex-direction: row-reverse;
+	align-items: flex-end
+
+}
+
+.headerRight a{
+	text-decoration: none;
+	margin:10px;
+
 }
 
 #menubar ul {
@@ -56,21 +73,13 @@ a:visited {
 	margin: 0px;
 	display: flex;
 	padding-left: 0px;
+	width: 100%;
+	height: 60px;
 	/*これがないと"・"分のスペースがでてくる*/
-	/* width: 100%; */
-}
-
-#menubar a {
-	text-decoration: none;
-}
-
-#menubar a:hover {
-	color: red;
 }
 
 #menubar li {
 	width: 100%;
-	padding: 10px 20px;
 	text-align: center;
 	border-color: white;
 	background-color: rgba(73, 206, 40, 0.51);
@@ -79,7 +88,15 @@ a:visited {
 	background-repeat: no-repeat;
 	color: white;
 	font-size: 23px;
-	border: #fff 3px outset;
+	border: rgb(240, 237, 237) 3px outset;
+}
+
+#menubar li a{
+	text-decoration: none;
+	line-height:55px;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 li.menubar_howto {
@@ -245,8 +262,6 @@ nav button{
 #contents {
 	clear: left;
 	color: black;
-	/* font-size: medium; */
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	background-color: rgba(129, 197, 193, 0.17);
 	margin: 20px 100px;
 }
@@ -259,7 +274,7 @@ nav button{
 }
 
 .contentsSubTitle h2 {
-	text-decoration: underline overline blue;
+	text-decoration: underline dotted rgb(161, 100, 250, 1);
 	background-image: url(./img/fish_medaka.png);
 	background-size: 50px;
 	background-repeat: no-repeat;
@@ -268,7 +283,7 @@ nav button{
 }
 
 #honbun {
-	padding: 0px 100px 10px 100px;
+	padding: 0px 100px 5px;
 }
 
 span.contentsAttention {
@@ -303,6 +318,7 @@ span.contentsAttentionBold {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
 }
 
 .kyouchou {
@@ -312,6 +328,17 @@ span.contentsAttentionBold {
 .adjustImg {
 	height: 300px;
 }
+
+/*******************photolist*****************/
+.photoListTop{
+	font-size: 30px;
+	margin-bottom: 80px;
+}
+
+.photoList{
+	list-style: none;
+}
+
 
 
 /****bubbles******/
@@ -332,21 +359,21 @@ span.contentsAttentionBold {
 	background-color: transparent;
 	border: 1px solid #fff;
 	border-radius: 50%;
-	animation: bubble 20s ease-in infinite;
+	animation: bubble 9s ease-in infinite;
 }
 
 .bubble:nth-child(1) {
 	width: 20px;
 	height: 20px;
 	left: 10%;
-	animation-duration: 6s;
+	animation-duration: 3s;
 }
 
 .bubble:nth-child(2) {
 	width: 30px;
 	height: 30px;
 	left: 20%;
-	animation-delay: 5s;
+	animation-delay: 1s;
 }
 
 .bubble:nth-child(3) {
@@ -368,7 +395,7 @@ span.contentsAttentionBold {
 	width: 10px;
 	height: 10px;
 	left: 60%;
-	animation-duration: 11s;
+	animation-duration: 7s;
 }
 
 .bubble:nth-child(6) {
@@ -376,27 +403,25 @@ span.contentsAttentionBold {
 	height: 30px;
 	left: 70%;
 	animation-duration: 5s;
-	animation-delay: 6s;
+	animation-delay: 2s;
 }
 
 .bubble:nth-child(7) {
 	width: 25px;
 	height: 25px;
 	left: 80%;
-	animation-duration: 6s;
 }
 
 .bubble:nth-child(8) {
 	width: 55px;
 	height: 55px;
 	left: 5%;
-	animation-duration: 10s;
 }
 
 @keyframes bubble {
 	0% {
 		bottom: 0px;
-		transform: translateX(0);
+		transform: translateX(-50px);
 	}
 	25% {
 		transform: translateX(50px);

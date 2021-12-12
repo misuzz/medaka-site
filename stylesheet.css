@@ -8,12 +8,12 @@ a:visited {
 	color: inherit;
 }
 
-a{
+a {
 	text-decoration: 2px solid underline grey;
 }
 
 
-a:hover{
+a:hover {
 	color: rgb(161, 100, 250, 1);
 }
 
@@ -58,12 +58,11 @@ a:hover{
 	height: 100%;
 	flex-direction: row-reverse;
 	align-items: flex-end
-
 }
 
-.headerRight a{
+.headerRight a {
 	text-decoration: none;
-	margin:10px;
+	margin: 10px;
 
 }
 
@@ -91,9 +90,9 @@ a:hover{
 	border: rgb(240, 237, 237) 3px outset;
 }
 
-#menubar li a{
+#menubar li a {
 	text-decoration: none;
-	line-height:55px;
+	line-height: 55px;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -146,37 +145,39 @@ span.youkihi {
 	font-size: large;
 	color: rgba(25, 0, 255, 0.952);
 }
+
 #count {
 	text-align: center;
 	font-size: larger;
 	font-weight: 300;
 	background-color: rgba(129, 197, 193, 0.17);
 }
+
 /*****calender&carousel*******/
-#lower{
+#lower {
 	display: flex;
 }
 
-#calender{
-	width:50%;
+#calender {
+	width: 50%;
 	margin: 30px 0 10px 30px;
 }
 
-#medakaBabySection{
+#medakaBabySection {
 	width: 450px;
 	height: 450px;
 	margin-top: 30px;
 }
 
-#medakaBabySection p{
+#medakaBabySection p {
 	font-size: 24px;
 	font-weight: bold;
-	color:rgba(161, 100, 250, 1);
+	color: rgba(161, 100, 250, 1);
 	text-align: center;
 	margin: 5px;
 }
 
-#medakaBabyPics{
+#medakaBabyPics {
 	width: 350px;
 	height: 350px;
 	margin: 0 auto;
@@ -184,7 +185,7 @@ span.youkihi {
 	position: relative;
 }
 
-#medakaBabyPics ul{
+#medakaBabyPics ul {
 	list-style: none;
 	display: flex;
 	margin: 0;
@@ -194,57 +195,58 @@ span.youkihi {
 	transition: transform .5s;
 }
 
-#medakaBabyPics li{
+#medakaBabyPics li {
 	height: 100%;
 	min-width: 100%;
 }
 
-#medakaBabyPics li img{
+#medakaBabyPics li img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border: 4px solid white;
 }
 
-#prev, #next{
+#prev, #next {
 	position: absolute;
 	top: 50%;
-	transform:translateY(-50%);
+	transform: translateY(-50%);
 	font-size: 20px;
 	font-weight: bolder;
-	color:rgba(161, 100, 250, 1);
-	background:rgba(161, 234, 250, 0.8);
+	color: rgba(161, 100, 250, 1);
+	background: rgba(161, 234, 250, 0.8);
 	border: none;
 	border-radius: 50px;
 	padding: 0 4px 4px;
 }
 
-#prev:hover, #next:hover{
-	background:rgba(161, 234, 250, 1);
+#prev:hover, #next:hover {
+	background: rgba(161, 234, 250, 1);
 }
-#prev{
+
+#prev {
 	left: 10;
 }
 
-#next{
+#next {
 	right: 0;
 }
 
-.btnHidden{
+.btnHidden {
 	display: none;
 }
 
-nav{
+nav {
 	text-align: center;
 	padding-top: 10px;
 }
 
 /*navのボタンに続くボタンに付けるCSS*/
-nav button + button{
+nav button+button {
 	margin-left: 8px;
 }
 
-nav button{
+nav button {
 	border: none;
 	background-color: rgb(196, 196, 196);
 	border-radius: 50%;
@@ -253,7 +255,7 @@ nav button{
 	cursor: pointer;
 }
 
-.current{
+.current {
 	background-color: rgb(124, 124, 124);
 }
 
@@ -330,13 +332,38 @@ span.contentsAttentionBold {
 }
 
 /*******************photolist*****************/
-.photoListTop{
+.photoListTop {
 	font-size: 30px;
 	margin-bottom: 80px;
 }
 
-.photoList{
+.photoList {
+	width: 100%;
 	list-style: none;
+	display: flex;
+	outline: 2px solid blue;
+	margin: 0;
+	padding: 0;
+}
+
+.photoList div {
+	outline: 3px solid yellow;
+	width: 100%;
+}
+
+.photoList img {
+	/* width: 100%;
+	height: 100%; */
+	object-fit: contain;
+	outline: 2px solid green
+}
+
+.photoList p {
+	outline: 1px red solid;
+	background: rgba(0, 0, 0, .2);
+	height: 50px;
+	margin: 0;
+	text-align: center;
 }
 
 
@@ -423,15 +450,19 @@ span.contentsAttentionBold {
 		bottom: 0px;
 		transform: translateX(-50px);
 	}
+
 	25% {
 		transform: translateX(50px);
 	}
+
 	50% {
 		transform: translateX(100px);
 	}
+
 	75% {
 		transform: translateX(30px);
 	}
+
 	100% {
 		bottom: 2500px;
 	}
@@ -456,13 +487,13 @@ span.contentsAttentionBold {
 
 /***********contact*******************/
 
-.endMsg{
+.endMsg {
 	/* display: none; */
 	text-align: center;
 	font-size: 32px;
 }
 
-.thximg{
+.thximg {
 	display: flex;
 	margin: 0 auto;
 }

@@ -1,31 +1,37 @@
 /**TopPage&framework**/
-
 body {
 	background: rgba(161, 234, 250, 1);
+	outline: 2px solid black;
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	border: white 3px solid;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+	background-color: rgba(201, 241, 250, 1);;
+}
+
+footer{
+	margin: 0;
+	padding: 0;
+	height: 100px;
+}
+
+a{
+	text-decoration: none;
 }
 
 a:visited {
 	color: inherit;
 }
 
-a {
-	text-decoration: 2px solid underline grey;
-}
-
-
 a:hover {
 	color: rgb(161, 100, 250, 1);
 }
 
-#wrapper {
-	border: white 3px solid;
-	width: 960px;
-	margin: 0 auto;
-	background-color: rgba(201, 241, 250, 1);
-}
-
 #header {
-	/* position: fixed; */
 	background-color: rgba(0, 231, 175, 0.28);
 	height: 120px;
 	width: 960px;
@@ -44,7 +50,6 @@ a:hover {
 }
 
 .headerLeft a {
-	text-decoration: none;
 	padding: 0px;
 }
 
@@ -61,9 +66,7 @@ a:hover {
 }
 
 .headerRight a {
-	text-decoration: none;
 	margin: 10px;
-
 }
 
 #menubar ul {
@@ -91,7 +94,6 @@ a:hover {
 }
 
 #menubar li a {
-	text-decoration: none;
 	line-height: 55px;
 	display: block;
 	width: 100%;
@@ -120,7 +122,6 @@ img {
 	border-bottom: azure 2px solid;
 	height: 450px;
 	object-fit: cover;
-	/*トリミング*/
 }
 
 #about {
@@ -288,6 +289,7 @@ nav button {
 	padding: 0px 100px 5px;
 }
 
+
 span.contentsAttention {
 	font-size: 13px;
 }
@@ -298,7 +300,6 @@ span.contentsAttentionBold {
 	color: red;
 }
 
-
 /********howto********/
 
 .howtolist {
@@ -307,6 +308,10 @@ span.contentsAttentionBold {
 
 .howtolist li {
 	padding-bottom: 10px;
+}
+
+.howtolist a{
+	text-decoration: 2px solid underline grey;
 }
 
 .introduceTitle {
@@ -337,34 +342,57 @@ span.contentsAttentionBold {
 	margin-bottom: 80px;
 }
 
-.photoList {
-	width: 100%;
+.photoListTop a{
+	text-decoration: 2px solid underline grey;
+}
+
+.bigimg {
 	list-style: none;
 	display: flex;
-	outline: 2px solid blue;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	width: 700px;
+	height: 100%;
+}
+
+.bigimg div {
+	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-.photoList div {
-	outline: 3px solid yellow;
-	width: 100%;
-}
-
-.photoList img {
-	/* width: 100%;
-	height: 100%; */
+.bigimg div li img{
+	width: 700px;
 	object-fit: contain;
-	outline: 2px solid green
 }
 
-.photoList p {
-	outline: 1px red solid;
-	background: rgba(0, 0, 0, .2);
+
+.bigimg p {
+	background: rgba(103, 165, 235, 0.2);
 	height: 50px;
 	margin: 0;
 	text-align: center;
+	line-height: 50px;
+	font-size: larger;
 }
+
+.photoList{
+	display: flex;
+	list-style: none;
+	justify-content: center;
+}
+
+.photoList img{
+	width: 70px;
+	height: 70px;
+	padding: 0;
+	border: #fff 2px solid;
+	cursor: pointer;
+	margin: 0 auto 50px auto;
+}
+
 
 
 
@@ -380,55 +408,56 @@ span.contentsAttentionBold {
 }
 
 .bubble {
-	position: relative;
+	position: absolute;
+	bottom: 0;
 	width: 40px;
 	height: 40px;
 	background-color: transparent;
 	border: 1px solid #fff;
 	border-radius: 50%;
-	animation: bubble 9s ease-in infinite;
+	animation: bubblesMove 15s ease-in infinite;
 }
 
 .bubble:nth-child(1) {
-	width: 20px;
-	height: 20px;
+	width: 50px;
+	height: 50px;
 	left: 10%;
-	animation-duration: 3s;
+	animation-duration: 13s;
+	animation-delay: 5s;
 }
 
 .bubble:nth-child(2) {
 	width: 30px;
 	height: 30px;
 	left: 20%;
-	animation-delay: 1s;
+	animation-delay: 3s;
 }
 
 .bubble:nth-child(3) {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	left: 30%;
-	animation-duration: 5s;
+	animation-duration: 8s;
 }
 
 .bubble:nth-child(4) {
-	width: 50px;
-	height: 50px;
-	left: 45%;
-	animation-duration: 8s;
-	animation-delay: 3s;
+	width: 20px;
+	height: 20px;
+	left: 40%;
+	animation-duration: 10s;
 }
 
 .bubble:nth-child(5) {
 	width: 10px;
 	height: 10px;
-	left: 60%;
+	left: 50%;
 	animation-duration: 7s;
 }
 
 .bubble:nth-child(6) {
 	width: 30px;
 	height: 30px;
-	left: 70%;
+	left: 60%;
 	animation-duration: 5s;
 	animation-delay: 2s;
 }
@@ -436,27 +465,27 @@ span.contentsAttentionBold {
 .bubble:nth-child(7) {
 	width: 25px;
 	height: 25px;
-	left: 80%;
+	left: 70%;
 }
 
 .bubble:nth-child(8) {
 	width: 55px;
 	height: 55px;
-	left: 5%;
+	left: 80%;
 }
 
-@keyframes bubble {
+@keyframes bubblesMove {
 	0% {
-		bottom: 0px;
-		transform: translateX(-50px);
+		bottom: 0;
+		transform: translateX(0px);
 	}
 
 	25% {
-		transform: translateX(50px);
+		transform: translateX(100px);
 	}
 
 	50% {
-		transform: translateX(100px);
+		transform: translateX(200px);
 	}
 
 	75% {

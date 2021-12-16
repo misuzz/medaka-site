@@ -18,8 +18,8 @@ function timeCount() {
 	nowMinute = ('0' + nowMinute).slice(-2);
 	nowSecond = ('0' + nowSecond).slice(-2);
 
-	let msg = "<p>" + nowYear + "年" + nowMonth + "月" + nowDay + "日" + "(" + nowYoubi + ")" + nowHour + "時" + nowMinute + "分" + nowSecond + "秒 現在、</p>";
-	document.getElementById("count").innerHTML = msg;
+	const msg = `${nowYear}年${nowMonth}月${nowDay}日(${nowYoubi})${nowHour}  時${nowMinute}分${nowSecond}秒 現在100匹以上飼育中`;
+	document.getElementById("count").textContent = msg;
 }
 ////////////////////carousel/////////////////////////////////
 

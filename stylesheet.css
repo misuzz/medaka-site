@@ -346,30 +346,65 @@ span.contentsAttentionBold {
 	text-decoration: 2px solid underline grey;
 }
 
-.bigimg {
+#bigimgParent{
+	position: relative;
+	outline: 3px solid red;
+}
+
+#bigimg {
 	list-style: none;
 	display: flex;
 	margin: 0 auto;
 	padding: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 	width: 700px;
 	height: 100%;
+	outline: 3px solid black;
 }
 
-.bigimg div {
+#photoPrev, #photoNext{
+	position: absolute;
+	top: 200px;
+	font-size: 200%;
+	cursor: pointer;
+	color: rgb(161, 100, 250, 1)
+
+}
+
+#photoPrev:hover, #photoNext:hover{
+	color: rgba(0, 255, 157, 0.5);
+}
+
+#photoPrev{
+	left: 0;
+}
+
+#photoNext{
+	right: 0;
+}
+
+
+#bigimg {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	outline: 4px green solid;
+	/* overflow: hidden; */
 }
 
-.bigimg div li img{
-	width: 700px;
+#bigimg li{
+	height: 100%;
+	min-width: 100%;
+}
+
+#bigimg img{
+	width: 100%;
 	object-fit: contain;
 }
 
 
-.bigimg p {
+#bigimg p {
 	background: rgba(103, 165, 235, 0.2);
 	height: 50px;
 	margin: 0;
@@ -378,13 +413,13 @@ span.contentsAttentionBold {
 	font-size: larger;
 }
 
-.photoList{
+#photoList{
 	display: flex;
 	list-style: none;
 	justify-content: center;
 }
 
-.photoList img{
+#photoList img{
 	width: 70px;
 	height: 70px;
 	padding: 0;

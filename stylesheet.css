@@ -1,7 +1,6 @@
 /**TopPage&framework**/
 body {
 	background: rgba(161, 234, 250, 1);
-	outline: 2px solid black;
 	margin: 0;
 	padding: 0;
 }
@@ -420,7 +419,7 @@ span.contentsAttentionBold {
 	list-style: none;
 	justify-content: center;
 	margin: 10px 20px;
-	outline: 3px solid red;
+	flex-wrap: wrap;
 }
 
 .list-children {
@@ -429,7 +428,7 @@ span.contentsAttentionBold {
 	padding: 0;
 	border: #fff 2px solid;
 	cursor: pointer;
-	margin: 0 auto 50px auto;
+	margin: 0 auto 10px auto;
 	cursor: pointer;
 }
 

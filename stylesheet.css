@@ -1,8 +1,11 @@
 /**TopPage&framework**/
 body {
-	background: rgba(161, 234, 250, 1);
+	background: rgba(161, 234, 250, .5);
 	margin: 0;
 	padding: 0;
+	background-image: url('img/twinkle_00010.jpeg');
+	background-size: cover;
+
 }
 
 #wrapper {
@@ -10,7 +13,7 @@ body {
 	width: 960px;
 	margin: 0 auto;
 	padding: 0 0 30px 0;
-	background-color: rgba(201, 241, 250, 1);
+	background-color: rgba(201, 241, 250, .8);
 	;
 }
 
@@ -33,6 +36,8 @@ a:hover {
 }
 
 #header {
+	background-image: url('img/water_00001.jpeg');
+	background-size: cover;
 	background-color: rgba(0, 231, 175, 0.28);
 	height: 120px;
 	width: 960px;
@@ -85,7 +90,7 @@ a:hover {
 	width: 100%;
 	text-align: center;
 	border-color: white;
-	background-color: rgba(73, 206, 40, 0.51);
+	background-color: rgba(10, 231, 175, 0.6);
 	background-size: 50px;
 	background-position: left;
 	background-repeat: no-repeat;

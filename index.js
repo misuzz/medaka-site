@@ -19,7 +19,7 @@ function timeCount() {
 	nowSecond = ('0' + nowSecond).slice(-2);
 
 	const msg = `${nowYear}年${nowMonth}月${nowDay}日(${nowYoubi})${nowHour}  時${nowMinute}分${nowSecond}秒 現在100匹以上飼育中`;
-	document.getElementById("count").textContent = msg;
+	document.getElementById("count").innerHTML = msg;
 }
 ////////////////////carousel/////////////////////////////////
 

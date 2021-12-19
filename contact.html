@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>お問い合わせ</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 	<script type="text/Javascript" src="contact.js"></script>
 </head>
 
@@ -19,16 +21,42 @@
 				<p>by misuzz</p>
 			</div>
 			<div class="headerRight">
-				<a href="aboutThisBlog.html">このブログについて</a>
+				<a id="openModal">このブログについて</a>
+			</div>
+			<div id="mask" class="hiddenModal"></div>
+			<div id="modal" class="hiddenModal">
+				<span class="material-icons">close</span>
+				<div id="contents">
+					<div id="contentsTitle">
+						<h2>このブログについて</h2>
+					</div>
+					<div class="contentsSubTitle">
+						<h2>このブログについて</h2>
+					</div>
+					<div id="honbun">
+						<p>　この「みすずのめだか」は、めだかの記録をつけつつ、webサイト作成の練習の場にしています。
+							<br>
+							　そのため、ちょろちょろ内容が変更になり形が崩れたりすることがあると思いますが、ご理解の程よろしくお願いいたします。
+						</p>
+					</div>
+					<div class="contentsSubTitle">
+						<h2>筆者について</h2>
+					</div>
+					<div id="honbun">
+						<P>東京で地方公務員をしていました。現在はエンジニアの資格や言語を勉強しつつ、翻訳・通訳の仕事をしています。</P>
+					</div>
+				</div>
+				<div id="closeModal">閉じる</div>
 			</div>
 		</div>
+
 
 		<div id="menubar">
 			<ul>
 				<li class="menubar_howto"><a href="howToTop.html">飼育方法</a></li>
 				<li class="menubar_camera"><a href="photoTop.html">めだかの写真</a></li>
 				<li class="menubar_sell"><a href="commingSoon.html">めだか売ります</a></li>
-				<li class="menubar_contact"><a href=contact.html>　お問い合わせ</a></li>
+				<li class="menubar_contact"><a href=contact.html>お問い合わせ</a></li>
 			</ul>
 		</div>
 		<div id="bodyTop">
@@ -85,4 +113,5 @@
 		<div class="bubble"></div>
 	</div>
 </footer>
+<script src="modal.js"></script>
 </html>

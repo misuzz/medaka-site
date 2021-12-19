@@ -356,6 +356,17 @@ span.contentsAttentionBold {
 	transition: transform .4s;
 }
 
+.material-icons{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.material-icons:hover{
+	color: black;
+}
+
 #closeModal{
 	width: 200px;
 	border: 1px solid rgb(185, 185, 185);

@@ -8,42 +8,61 @@ body {
 
 }
 
-#wrapper {
-	border: white 3px solid;
-	width: 960px;
-	margin: 0 auto;
-	padding: 0 0 30px 0;
-	background-color: rgba(201, 241, 250, .8);
-	;
-}
-
-footer {
-	margin: 0;
-	padding: 0;
-	height: 100px;
-}
-
-a {
-	text-decoration: none;
-	cursor: pointer;
-}
-
-a:visited {
-	color: inherit;
-}
-
-a:hover {
-	color: rgb(161, 100, 250, 1);
-}
 
 #header {
 	background-image: url('img/water_00001.jpeg');
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-color: rgba(0, 231, 175, 0.28);
 	height: 120px;
 	width: 960px;
 	color: white;
 	margin: 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+#movingFish {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+#moving1 {
+	position: inherit;
+	top: -20px;
+	right: -20px;
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	border: none;
+	animation: swimming 12s linear infinite;
+
+}
+
+#moving2 {
+	position: inherit;
+	top: 40px;
+	right: -20px;
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	border: none;
+	animation: swimming 16s linear infinite;
+}
+
+@keyframes swimming {
+	0% {
+		transform: translateX(1000px);
+	}
+
+	50% {
+		transform: translate(550px, 10px);
+	}
+
+	100% {
+		transform: translateX(-100px);
+	}
 }
 
 .headerLeft {
@@ -54,6 +73,7 @@ a:hover {
 
 .headerLeft h1 {
 	font-size: 40px;
+	z-index: 1;
 }
 
 .headerLeft a {
@@ -69,11 +89,34 @@ a:hover {
 	display: flex;
 	height: 100%;
 	flex-direction: row-reverse;
-	align-items: flex-end
+	align-items: flex-end;
 }
 
-.headerRight a{
+.headerRight a {
 	margin: 10px;
+	z-index: 1;
+}
+
+#wrapper {
+	border: white 3px solid;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+	background-color: rgba(201, 241, 250, .8);
+	;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover {
+	color: rgb(161, 100, 250, 1);
 }
 
 #menubar ul {
@@ -84,7 +127,6 @@ a:hover {
 	padding-left: 0px;
 	width: 100%;
 	height: 60px;
-	/*これがないと"・"分のスペースがでてくる*/
 }
 
 #menubar li {
@@ -123,10 +165,15 @@ li.menubar_contact {
 	background-image: url(./img/phone_kurodenwa.png);
 }
 
+footer {
+	margin: 0;
+	padding: 0;
+	height: 100px;
+}
+
 img {
 	box-sizing: border-box;
-	border-top: azure 2px solid;
-	border-bottom: azure 2px solid;
+	border: azure 2px solid;
 	height: 450px;
 	object-fit: cover;
 }
@@ -147,7 +194,7 @@ img {
 	padding-left: 10px;
 }
 
-/******TOPPAGE************/
+/******************************TOPPAGE********************************/
 span.youkihi {
 	font-weight: 100;
 	font-size: large;
@@ -162,7 +209,7 @@ span.youkihi {
 	background-color: rgba(129, 197, 193, 0.17);
 }
 
-#loading{
+#loading {
 	margin: 0 auto;
 	width: 30px;
 	height: 30px;
@@ -176,13 +223,14 @@ span.youkihi {
 	from {
 		transform: none;
 	}
+
 	to {
 		transform: rotate(360deg);
 	}
 }
 
 
-/*****calender&carousel*******/
+/************************calender&carousel*************************/
 #lower {
 	display: flex;
 }
@@ -288,7 +336,7 @@ nav button {
 	background-color: rgb(124, 124, 124);
 }
 
-/****全サブぺージの subtitle*****/
+/*************************全サブぺージの subtitle******************/
 
 #contents {
 	clear: left;
@@ -316,8 +364,8 @@ nav button {
 	padding: 0px 100px 5px;
 }
 
-#honbun a{
-	text-decoration: 2px solid underline grey;
+#honbun a {
+	text-decoration: 1px solid underline grey;
 }
 
 
@@ -331,24 +379,24 @@ span.contentsAttentionBold {
 	color: red;
 }
 
-/**********modalwindow*************/
+/***********************modalwindow*****************************/
 
-#mask{
+#mask {
 	background-color: rgba(68, 68, 68, 0.85);
 	position: fixed;
-	top:0;
-	right:0;
-	left:0;
-	bottom:0;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	z-index: 1;
 }
 
-#modal{
+#modal {
 	background-color: rgba(161, 234, 250, .8);
 	width: 900px;
 	border-radius: 5px;
 	position: absolute;
-	top:10%;
+	top: 10%;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -356,44 +404,44 @@ span.contentsAttentionBold {
 	transition: transform .4s;
 }
 
-.material-icons{
+.material-icons {
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
 }
 
-.material-icons:hover{
+.material-icons:hover {
 	color: black;
 }
 
-#closeModal{
+#closeModal {
 	width: 200px;
 	border: 1px solid rgb(185, 185, 185);
 	border-radius: 5px;
 	background-color: rgb(230, 230, 230);
 	text-align: center;
-	padding: 10px 0 ;
+	padding: 10px 0;
 	margin: 20px auto;
 	cursor: pointer;
 }
 
-#closeModal:hover{
+#closeModal:hover {
 	background-color: rgb(211, 211, 211);
 	color: black;
 }
 
-#mask.hiddenModal{
+#mask.hiddenModal {
 	display: none;
 }
 
-#modal.hiddenModal{
+#modal.hiddenModal {
 	transform: translate(0, -1000px);
 
 }
 
 
-/********howto********/
+/******************************howto****************************/
 
 .howtolist {
 	font-size: 30px;
@@ -413,12 +461,15 @@ span.contentsAttentionBold {
 }
 
 .syutten {
-	color: gainsboro;
 	font-size: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
+}
+
+.inyou {
+	font-size: 10px;
 }
 
 .kyouchou {
@@ -461,9 +512,10 @@ span.contentsAttentionBold {
 	color: rgba(0, 255, 157, 0.5);
 }
 
-.hidden{
+.hidden {
 	display: none;
 }
+
 /*************************/
 
 #bigimgParent {
@@ -520,12 +572,12 @@ span.contentsAttentionBold {
 	cursor: pointer;
 }
 
-.list-children:hover{
+.list-children:hover {
 	opacity: 0.8;
 }
 
 
-/****bubbles******/
+/******************************bubbles*******************************/
 
 .bubbles {
 	position: relative;
@@ -626,7 +678,7 @@ span.contentsAttentionBold {
 	}
 }
 
-/******coming soon******/
+/******************************coming soon****************************/
 
 .stickerURL {
 	display: flex;
@@ -640,13 +692,15 @@ span.contentsAttentionBold {
 	height: 120px;
 }
 
-@media screen and (max-width: 480px) {}
-
+#feedingImg {
+	display: block;
+	margin: 0 auto;
+	border: none;
+}
 
 /***********contact*******************/
 
 .endMsg {
-	/* display: none; */
 	text-align: center;
 	font-size: 32px;
 }
@@ -654,6 +708,7 @@ span.contentsAttentionBold {
 .thximg {
 	display: flex;
 	margin: 0 auto;
+	border: none;
 }
 
 

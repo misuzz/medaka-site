@@ -111,10 +111,6 @@ a {
 	cursor: pointer;
 }
 
-a:visited {
-	color: inherit;
-}
-
 a:hover {
 	color: rgb(161, 100, 250, 1);
 }

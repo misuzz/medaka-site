@@ -45,7 +45,7 @@ function btnHidden() {
 }
 
 //ドットの色を移動させる
-function moveCurrentDots(){
+function moveCurrentDots() {
 	dots.forEach(aDot => {
 		aDot.classList.remove('current');
 	});
@@ -89,3 +89,28 @@ prev.addEventListener('click', () => {
 	currentSlide--;
 	slideImg();
 });
+
+
+/////////////////////////modalwindow////////////////////////////////////
+
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const mask = document.getElementById('mask');
+const modal = document.getElementById('modal');
+
+//openModal
+openModal.addEventListener('click', () => {
+	modal.classList.remove('hiddenModal');
+	mask.classList.remove('hiddenModal');
+})
+
+
+//closeModal
+closeModal.addEventListener('click', () => {
+	modal.classList.add('hiddenModal');
+	mask.classList.add('hiddenModal');
+})
+
+mask.addEventListener('click', () => {
+	closeModal.click();
+})

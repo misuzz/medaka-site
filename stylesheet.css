@@ -25,6 +25,7 @@ footer {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 a:visited {
@@ -71,7 +72,7 @@ a:hover {
 	align-items: flex-end
 }
 
-.headerRight a {
+.headerRight a{
 	margin: 10px;
 }
 
@@ -155,10 +156,31 @@ span.youkihi {
 
 #count {
 	text-align: center;
+	line-height: 50px;
 	font-size: larger;
 	font-weight: 300;
 	background-color: rgba(129, 197, 193, 0.17);
 }
+
+#loading{
+	margin: 0 auto;
+	width: 30px;
+	height: 30px;
+	border: 10px solid rgb(180, 180, 180);
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: loading-animation .5s infinite linear;
+}
+
+@keyframes loading-animation {
+	from {
+		transform: none;
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 
 /*****calender&carousel*******/
 #lower {
@@ -279,7 +301,6 @@ nav button {
 	color: #fff;
 	background-color: rgba(0, 231, 175, 0.28);
 	padding: 10px 10px 10px 50px;
-	width: 700px;
 }
 
 .contentsSubTitle h2 {
@@ -319,26 +340,45 @@ span.contentsAttentionBold {
 	right:0;
 	left:0;
 	bottom:0;
+	z-index: 1;
 }
 
 #modal{
 	background-color: rgba(161, 234, 250, .8);
 	width: 900px;
-	border-radius: 4px;
+	border-radius: 5px;
 	position: absolute;
 	top:10%;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
+	z-index: 2;
+	transition: transform .4s;
 }
 
+#closeModal{
+	width: 200px;
+	border: 1px solid rgb(185, 185, 185);
+	border-radius: 5px;
+	background-color: rgb(230, 230, 230);
+	text-align: center;
+	padding: 10px 0 ;
+	margin: 20px auto;
+	cursor: pointer;
+}
 
-#mask.hidden{
+#closeModal:hover{
+	background-color: rgb(211, 211, 211);
+	color: black;
+}
+
+#mask.hiddenModal{
 	display: none;
 }
 
-#modal.hidden{
-	transform: translateY(0, -500px);
+#modal.hiddenModal{
+	transform: translate(0, -1000px);
+
 }
 
 

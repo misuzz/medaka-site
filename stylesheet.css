@@ -1,3 +1,7 @@
+*{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+}
+
 /**TopPage&framework**/
 body {
 	background: rgba(161, 234, 250, .5);
@@ -115,6 +119,7 @@ a:hover {
 	color: rgb(161, 100, 250, 1);
 }
 
+
 #menubar ul {
 	clear: both;
 	list-style: none;
@@ -177,7 +182,6 @@ img {
 #about {
 	color: black;
 	font-size: medium;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	background-color: rgba(129, 197, 193, 0.17);
 }
 
